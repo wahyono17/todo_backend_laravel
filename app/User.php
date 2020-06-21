@@ -41,4 +41,9 @@ class User extends Authenticatable
     public function AauthAcessToken(){
         return $this->hasMany('\App\OauthAccessToken');
     }
+
+    public function todos()
+    {
+        return $this->hasMany('App\Todo');
+    }
 }
